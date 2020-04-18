@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ReservAccRef</string>
+    <string name="reserve">예약</string>
+    <string name="accept">수락</string>
+    <string name="reject">거절</string>
+    <string name="reserve_date">예약 날짜</string>
+    <string name="reserve_purpose">예약 목적</string>
+    <string name="reserve_time">예약 시간</string>
+    <string name="reserve_people">예약 인원</string>
+    <string name="attend_people">참가 인원</string>
+    <string name="position_setting">현 위치로 주소 설정</string>
+    <string name="main_menu">대표메뉴</string>
+    <string name="reserve_button">예약하기</string>
+    <string name="reserve_submit">예약신청</string>
+    <string name="review">리뷰</string>
+</resources>
