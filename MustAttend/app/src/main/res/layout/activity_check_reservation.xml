@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+
+    android:layout_gravity="center"
+    android:background="#fff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+<!--    refresh Button-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/refresh_btn"
+            android:layout_marginLeft="340dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="0dp"
+            android:src="@drawable/refresh"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="#000"
+        />
+<!--Example1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="일미 닭갈비
+            \n예약 날짜     5월      5일
+            \n예약 시간     19시      30분
+            \n참가 인원       20명           "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="118dp"
+            android:layout_gravity="right"
+            android:src="@drawable/waiting" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:background="#0f4c81"
+        />
+<!--Example2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="일미 닭갈비
+            \n예약 날짜     오늘
+            \n예약 시간     1시간 전
+            \n참가 인원       21명         "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="133dp"
+            android:layout_gravity="right"
+            android:src="@drawable/success" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:background="#0f4c81"
+        />
+<!--    Example3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="일미 닭갈비
+            \n
+            \n수용할 수 없는 인원입니다.               "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="133dp"
+            android:layout_gravity="right"
+            android:src="@drawable/fail" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:background="#0f4c81"
+        />
+<!--    Example4-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    >
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="일미 닭갈비
+            \n
+            \n15일전               "
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="113dp"
+        android:layout_height="133dp"
+        android:layout_gravity="right"
+        android:src="@drawable/review" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <ImageView
+        android:layout_width="113dp"
+        android:layout_height="133dp"
+        android:layout_gravity="right"
+        android:src="@drawable/rereserve" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:background="#0f4c81"
+        />
+
+<!--&lt;!&ndash;Bottom Bar&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="4"-->
+<!--        >-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="홈"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            android:padding="0dp"-->
+<!--            android:background="#fff"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="추천"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            android:padding="0dp"-->
+<!--            android:background="#fff"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="예약내역"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            android:padding="0dp"-->
+<!--            android:background="#fff"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="my"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            android:padding="0dp"-->
+<!--            android:background="#fff"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+    </LinearLayout>
+    </ScrollView>
+
+<!--Bottom ActionBar-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
