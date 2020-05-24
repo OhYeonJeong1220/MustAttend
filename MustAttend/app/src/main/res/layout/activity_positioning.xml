@@ -1,72 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:baselineAligned="true"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout3">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/temppurpose2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundwire"
+                android:hint="예) 충대로"
+                android:inputType="text"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                tools:layout_conversion_absoluteHeight="54dp"
+                tools:layout_conversion_absoluteWidth="300dp"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="210dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/roundwire"
+                tools:layout_conversion_absoluteHeight="78dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="320dp"
+                tools:layout_editor_absoluteY="199dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/reserverequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/roundwire"
+                android:paddingLeft="50dp"
+                android:paddingTop="15dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="15dp"
+                android:text="@string/position_setting"
+                android:textColor="#184C88"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="56dp"
+                tools:layout_conversion_absoluteWidth="271dp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="277dp" />
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="12"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginTop="200dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/temppurpose2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="3"
-                android:background="@drawable/roundwire"
-                android:hint="예) 충대로"
-                android:inputType="textCapWords"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:textAllCaps="false"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/roundwire"
-                android:text="검색아이콘 추가할거임" />
-        </LinearLayout>
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/refuse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_horizontal|center_vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="350dp"
-        android:background="@drawable/roundwire"
-        android:paddingLeft="50dp"
-        android:paddingTop="15dp"
-        android:paddingRight="50dp"
-        android:paddingBottom="15dp"
-        android:text="@string/position_setting"
-        android:textColor="#184C88"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+
 </LinearLayout>

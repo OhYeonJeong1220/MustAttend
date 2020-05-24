@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -48,6 +49,7 @@ public class StoreActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void addLayout1() {
@@ -84,5 +86,9 @@ public class StoreActivity extends AppCompatActivity {
 
         /* 리스트뷰에 어댑터 등록 */
         mListView.setAdapter(mMyAdapter);
+    }
+
+    public void onReservButtonClicked (View v){
+        Toast.makeText(this,"예약 신청이 완료되었습니다.", Toast.LENGTH_LONG).show();
     }
 }

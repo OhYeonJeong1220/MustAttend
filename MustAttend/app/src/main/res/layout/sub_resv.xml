@@ -74,12 +74,13 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/refuse"
+            android:id="@+id/reserverequest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/roundcorner"
+            android:onClick="onReservButtonClicked"
             android:paddingLeft="50dp"
             android:paddingTop="15dp"
             android:paddingRight="50dp"
