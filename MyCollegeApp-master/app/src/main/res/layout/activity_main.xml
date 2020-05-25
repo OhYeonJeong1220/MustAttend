@@ -343,6 +343,7 @@
         android:layout_marginTop="16dp"
         android:background="#00FF0000"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="onLocationButtonClicked"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

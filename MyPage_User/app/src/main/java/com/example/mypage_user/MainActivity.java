@@ -27,4 +27,11 @@ public class MainActivity extends AppCompatActivity {
         //액티비티 시작!
         startActivity(intent);
     }
+    public void onLeaveButtonClicked(View v)
+    {
+        //SubActivity로 가는 인텐트를 생성
+        Intent intent = new Intent(this, ByeActivity.class);
+        //액티비티 시작!
+        startActivity(intent);
+    }
 }

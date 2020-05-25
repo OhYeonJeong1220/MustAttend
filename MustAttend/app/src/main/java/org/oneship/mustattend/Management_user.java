@@ -23,7 +23,13 @@ public class Management_user extends AppCompatActivity {
     public void LogoutClicked(View v)
     {
         //SubActivity로 가는 인텐트를 생성
-        Intent intent = new Intent(this, LogoutActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
+        //액티비티 시작!
+        startActivity(intent);
+    }
+    public void changeButtonClicked(View v){
+        //SubActivity로 가는 인텐트를 생성
+        Intent intent = new Intent(this, ChangingInfo.class);
         //액티비티 시작!
         startActivity(intent);
     }

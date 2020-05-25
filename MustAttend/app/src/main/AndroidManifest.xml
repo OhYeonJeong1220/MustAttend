@@ -20,14 +20,14 @@
         <activity android:name=".Management" />
         <activity android:name=".LogoutActivity" />
         <activity android:name=".ReviewManagment_UserActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".Management_user" />
         <activity android:name=".ReserveRequest" />
         <activity android:name=".StoreListActivity" />
         <activity android:name=".BookingActivity" />
         <activity android:name=".RecommendActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".StoreActivity">
+        <activity android:name=".StoreActivity" />
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

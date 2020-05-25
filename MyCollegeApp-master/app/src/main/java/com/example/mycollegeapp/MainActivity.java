@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     {
         Toast.makeText(getApplicationContext(),"일식", Toast.LENGTH_SHORT).show();
     }
+    public void onLocationButtonClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), TempActivity.class);
+        startActivity(intent);
+    }
 
 
 }
