@@ -299,6 +299,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#FFFFFF"
+            android:onClick="RecommendButtonClicked"
             android:text="추천" />
 
         <Button
@@ -307,6 +308,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#FFFFFF"
+            android:onClick="CheckButtonClicked"
             android:text="예약 내역"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

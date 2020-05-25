@@ -3,6 +3,7 @@ package org.oneship.mustattend;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,5 +26,12 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignUp.class);
         //액티비티 시작!
         startActivity(intent);
+    }
+    @Override
+    public void onBackPressed(){
+        Toast.makeText(this, "앱이 종료됩니다.", Toast.LENGTH_SHORT).show();
+        finishAffinity();
+        System.runFinalization();
+        System.exit(0);
     }
 }
