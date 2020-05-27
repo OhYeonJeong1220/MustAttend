@@ -1,0 +1,2 @@
+rootProject.name='MustAttend2_java_ver'
+include ':app'

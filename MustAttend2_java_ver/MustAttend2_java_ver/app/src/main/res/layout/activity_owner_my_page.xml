@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="12"
+    android:layout_gravity="center"
+    android:background="#fff"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/logo"
+        />
+    <!--shop name layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ShopName_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="가게이름"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="이름을 입력하세요." />
+    </LinearLayout>
+
+    <!--ShopAddress layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ShopAddress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게주소"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ShopAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="주소를 입력하세요."
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <!--ShopImage layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ShopImage_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게사진"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/upload_button_ShopImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:text="업로드 +"
+            android:background="#0f4c81"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    <!--ShopPhone layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ShopPhone_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전화번호"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ShopPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_gravity="center"
+            android:hint="번호를 입력하세요."
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <!--ShopPrivateNum layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ShopPrivateNum_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사업자 등록번호"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/ShopPrivateNum"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:hint="번호를 입력하세요."
+            android:inputType="phone" />
+    </LinearLayout>
+    <!--ShopPic-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/Shop_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사업자 등록증"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:text="업로드 +"
+            android:background="#0f4c81"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+    <!--Place layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/Place_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주요시설"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/Place"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="주요시설을 입력하세요."
+            android:inputType="phone" />
+    </LinearLayout>
+    <!--Parking    -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/Parking_view"
+                android:layout_marginRight="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주차여부"
+                android:textColor="#0f4c81"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"/>
+
+            <RadioButton
+                android:id="@+id/r_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:text="가능" />
+
+            <RadioButton
+                android:id="@+id/r_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="불가능"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+        </RadioGroup>
+    </LinearLayout>
+    <!--Capacity    -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/Capacity_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수용인원"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"/>
+
+        <NumberPicker
+            android:id="@+id/Capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="160dp"
+            />
+
+    </LinearLayout>
+    <!--Success button-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#0f4c81"
+            android:text="수정완료"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

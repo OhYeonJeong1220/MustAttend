@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/HomeItem"
+        android:icon="@drawable/home"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="홈"
+        />
+    <item
+        android:id="@+id/FavoriteItem"
+        android:icon="@drawable/favorite"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="찜" />
+    <item
+        android:id="@+id/RecommendItem"
+        android:icon="@drawable/recommend"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="추천" />
+    <item
+        android:id="@+id/ListItem"
+        android:icon="@drawable/list"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="예약내역" />
+    <item
+        android:id="@+id/MyPageItem"
+        android:icon="@drawable/my"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="MY" />
+</menu>

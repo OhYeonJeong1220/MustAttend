@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardColor"
+    tools:context=".Home">
+
+
+        <View
+            android:id="@+id/bg_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/ic_bg_topheader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_location_textview"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="충북 청주시 충대로 1"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="42dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FF0000"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="positionButtonClicked"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/cardColor"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:shadowColor="@color/cardColor"
+        android:text="가게이름"
+        android:textColor="@color/cardColor"
+        android:textColorHint="@color/cardColor"
+        android:textCursorDrawable="@color/cardColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

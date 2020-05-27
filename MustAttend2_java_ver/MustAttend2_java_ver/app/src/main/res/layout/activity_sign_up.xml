@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:layout_gravity="center"
+    android:background="#fff"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/logo"
+        />
+    <!--Email layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/email_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="E-mail"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="이메일을 입력하세요." />
+    </LinearLayout>
+
+    <!--password layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/password_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력하세요."
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <!--phone layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/phone_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전화번호"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_gravity="center"
+            android:hint="번호를 입력하세요."
+            android:layout_weight="1.5"
+            />
+    </LinearLayout>
+    <!--birth layout-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/birth_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생년월일"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"/>
+
+        <NumberPicker
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/year_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="년"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+        <NumberPicker
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/month_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+        <NumberPicker
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/day_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <!--Success button-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/SuccessRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#0f4c81"
+            android:onClick="SuccessRegisterCliked"
+            android:text="가입완료"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+</LinearLayout>

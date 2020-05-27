@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavoriteShop"
+    android:orientation="vertical"
+
+    android:layout_gravity="center"
+    android:background="#fff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!--    refresh Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:text="자주 찾는 가게"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
+                android:background="#000"
+                />
+
+            <!--Example1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    android:src="@drawable/hamburger"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="파파터치"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="043-000-0000"
+                        android:textColor="#000"
+                        android:textSize="13dp"
+                         />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="청주시 죽천로 146번길 7"
+                        android:textColor="#000"
+                        android:textSize="13dp"
+                         />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="left"
+                        android:background="#0f4c81"
+                        android:text="삭제"
+                        android:textColor="#fff"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:background="#0f4c81"
+                />
+
+            <!--Example2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    android:src="@drawable/soju"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="소주 한 잔"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="043-234-8282"
+                        android:textColor="#000"
+                        android:textSize="13dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="청주시 사창동 11-2번지"
+                        android:textColor="#000"
+                        android:textSize="13dp"
+                        />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="left"
+                        android:background="#0f4c81"
+                        android:text="삭제"
+                        android:textColor="#fff"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:background="#0f4c81"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Bottom ActionBar-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

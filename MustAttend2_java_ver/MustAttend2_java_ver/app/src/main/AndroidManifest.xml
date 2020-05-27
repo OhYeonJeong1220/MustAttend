@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mustattend2_java_ver">
+    <!-- 인터넷 연결을 허용하는 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MyPage"></activity>
+        <activity android:name=".Mypage" />
+        <activity android:name=".mainUI" />
+        <activity android:name=".location" />
+        <activity android:name=".NodeJsTest" />
+        <activity android:name=".FavoriteShop" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".CheckReservation" />
+        <activity android:name=".Owner_myPage" />
+        <activity android:name=".ChangingInfo" />
+        <activity android:name=".OwnerSingUp" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
