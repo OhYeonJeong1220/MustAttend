@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/menu_recommend"
+        android:icon="@drawable/recommend"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="추천" />
+    <item
+        android:id="@+id/menu_list"
+        android:icon="@drawable/list"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="예약내역" />
+    <item
+        android:id="@+id/menu_my"
+        android:icon="@drawable/my"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:title="MY" />
+</menu>

@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat;
 public class StoreListActivity extends AppCompatActivity {
 
     private ListView mListView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +19,11 @@ public class StoreListActivity extends AppCompatActivity {
 
         /* 아이템 추가 및 어댑터 등록 */
         dataSetting();
+
     }
+
+
+
 
     private void dataSetting(){
 

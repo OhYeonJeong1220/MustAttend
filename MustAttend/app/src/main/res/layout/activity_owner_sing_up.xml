@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".OwnerSingUp"
     android:orientation="vertical"
     android:weightSum="10"
     android:layout_gravity="center"
@@ -15,7 +15,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.4"
+        android:layout_weight="1
+"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:background="@drawable/logo"
@@ -82,6 +83,47 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+    <!--ShopPic-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/Shop_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게 사진"
+            android:textColor="#0f4c81"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/Shop_imge"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:text="업로드 +"
+            android:background="#0f4c81"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
     <!--ShopPhone layout-->
     <LinearLayout
         android:orientation="horizontal"
@@ -146,39 +188,7 @@
             android:hint="번호를 입력하세요."
             android:inputType="phone" />
     </LinearLayout>
-    <!--ShopPic-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:background="#fff"
-        android:layout_weight="1"
-        >
-        <TextView
-            android:id="@+id/Shop_image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="사업자 등록증"
-            android:textColor="#0f4c81"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
 
-       <Button
-           android:id="@+id/upload_button"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginRight="70dp"
-           android:text="업로드 +"
-           android:background="#0f4c81"
-           android:layout_gravity="center"
-           android:textStyle="bold"
-           android:textColor="#fff"
-           />
-    </LinearLayout>
     <!--Place layout -->
     <LinearLayout
         android:orientation="horizontal"
@@ -300,7 +310,7 @@
         android:gravity="center"
         >
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/Allregister"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -309,6 +319,7 @@
             android:text="등록완료"
             android:textStyle="bold"
             android:textColor="#fff"
+            android:onClick="AllregisterCliked"
             />
     </LinearLayout>
 

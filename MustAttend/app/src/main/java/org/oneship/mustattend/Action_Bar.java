@@ -37,4 +37,3 @@ public class Action_Bar extends AppCompatActivity {
         });
     }
 }
-

@@ -1,39 +1,30 @@
 package org.oneship.mustattend;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
-public class RecommendActivity extends AppCompatActivity {
-
-    private ListView mListView;
-
+public class RecommendActivity extends Fragment {
+    String user_email; //이메일 세션
+    ViewGroup viewGroup;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_store_list);
+    public View onCreateView(@NonNull LayoutInflater inflater, @NonNull  ViewGroup container,
+                             @NonNull Bundle savedInstanceState) {
+        viewGroup =(ViewGroup)inflater.inflate(R.layout.activity_recommend, container, false);
+        user_email = this.getArguments().getString("user_email"); //이메일 세션 받기
+        System.out.println("**********추천 화면 : "+user_email+"***********");
+        Intent intent = new Intent(getActivity().getApplicationContext(), RealRecommendActivity.class);
+        intent.putExtra("user_email",user_email); //intent로 mainUI activity에 전달할 이메일
+        startActivity(intent);
 
-        /* 위젯과 멤버변수 참조 획득 */
-        mListView = (ListView)findViewById(R.id.listView);
-
-        /* 아이템 추가 및 어댑터 등록 */
-        dataSetting();
+        return viewGroup;
     }
 
-    private void dataSetting(){
-
-        MyAdapter3 mMyAdapter = new MyAdapter3();
-
-
-        for (int i=0; i<50; i++) {
-            mMyAdapter.addItem(ContextCompat.getDrawable(getApplicationContext(), R.drawable.icon), "가게명_" + i, "거리_" + i);
-        }
-
-        /* 리스트뷰에 어댑터 등록 */
-        mListView.setAdapter(mMyAdapter);
-    }
 
 
 }

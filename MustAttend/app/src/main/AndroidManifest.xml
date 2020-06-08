@@ -2,38 +2,58 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.oneship.mustattend">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SignUp"/>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".RealRecommendActivity"></activity>
+        <activity android:name=".TestActivitiy" />
+        <activity android:name=".Position"></activity>
+        <activity android:name=".MyPosition"></activity>
+        <activity android:name=".Home" >
+
+        </activity>
+        <activity android:name=".GoogleMap" />
+        <activity android:name=".SignUp" />
         <activity android:name=".ChangingInfo" />
         <activity android:name=".Owner_myPage" />
         <activity android:name=".OwnerSingUp" />
         <activity android:name=".CheckReservation" />
         <activity android:name=".Action_Bar" />
-        <activity android:name=".ReviewManagment_Owner_Activity"/>
-        <activity android:name=".PositioningActivity" />
-        <activity android:name=".Management" />
-        <activity android:name=".LogoutActivity" />
-        <activity android:name=".ReviewManagment_UserActivity" />
-        <activity android:name=".Management_user" />
-        <activity android:name=".ReserveRequest" />
-        <activity android:name=".StoreListActivity" />
-        <activity android:name=".BookingActivity" />
-        <activity android:name=".RecommendActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".StoreActivity" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".ReviewManagment_Owner_Activity" />
+        <activity android:name=".mainUI">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mypage" />
+        <activity android:name=".LogoutActivity" />
+        <activity android:name=".ReviewManagment_UserActivity" />
+        <activity android:name=".LoginActivity">
+
+        </activity>
+        <activity android:name=".PositioningActivity"></activity>
+        <activity android:name=".ReserveRequest" />
+        <activity android:name=".StoreListActivity"></activity>
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".RecommendActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".StoreActivity"></activity>
+        <activity android:name=".RealReservation" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAEejySssg7zoXT_EYl2wYkZP4Q_2e0oUM" />
     </application>
 
 </manifest>

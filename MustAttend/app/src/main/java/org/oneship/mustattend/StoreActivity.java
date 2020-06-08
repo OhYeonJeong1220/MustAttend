@@ -24,7 +24,7 @@ public class StoreActivity extends AppCompatActivity {
 
         container = findViewById(R.id.container);
 
-        Button button1 = findViewById(R.id.button1);
+        Button button1 = findViewById(R.id.register);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
