@@ -31,7 +31,6 @@ import java.net.URL;
 
 
 public class SignUp extends AppCompatActivity  {
-    TextView connect;
     EditText email_id;
     String email;
     EditText pw_id;
@@ -44,6 +43,7 @@ public class SignUp extends AppCompatActivity  {
     int month;
     NumberPicker day_id;
     int day;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +83,7 @@ public class SignUp extends AppCompatActivity  {
     }
 
     public void SuccessRegisterCliked(View v){//가입 완료 버튼이 눌렸을 때
-        new JSONTask().execute("http://172.30.1.35:3000/post");
+        new JSONTask().execute("http://192.168.43.231:3000/post");
         email = email_id.getText().toString();
         //Toast.makeText(getApplicationContext(),email, Toast.LENGTH_LONG).show();
         pw = pw_id.getText().toString();
@@ -94,6 +94,7 @@ public class SignUp extends AppCompatActivity  {
         day = day_id.getValue();
 
     }
+
     public void registerStoreCliked(View v){//가게 등록 버튼이 눌렸을 때
         Intent intent = new Intent(this, OwnerSingUp.class);
         email = email_id.getText().toString();
@@ -104,7 +105,7 @@ public class SignUp extends AppCompatActivity  {
         day = day_id.getValue();
         //회원가입에서 입력한 정보를 가게등록 페이지로 넘겨줌
         intent.putExtra("email",email);
-        intent.putExtra("passward",pw);
+        intent.putExtra("password",pw);
         intent.putExtra("phoneNum",phoneNum);
         intent.putExtra("Year",Year);
         intent.putExtra("month",month);
@@ -123,7 +124,7 @@ public class SignUp extends AppCompatActivity  {
                 //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("email", email);
-                jsonObject.put("passward", pw);
+                jsonObject.put("password", pw);
                 jsonObject.put("phoneNum", phoneNum);
                 jsonObject.put("Year", Year);
                 jsonObject.put("month", month);

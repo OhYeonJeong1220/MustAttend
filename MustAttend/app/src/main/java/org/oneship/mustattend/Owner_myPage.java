@@ -14,12 +14,14 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,14 +36,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Owner_myPage extends AppCompatActivity implements View.OnClickListener {
+
+    RadioButton possible_id; //주차 가능 라디오 버튼
+    RadioButton impossible_id; //주차 안돼 라디오 버튼
     String user_email;  //이메일 섹션
-    EditText ShopName_id;
+    TextView ShopName_id;
     String ShopName;
-    EditText ShopAddress_id;
+    TextView ShopAddress_id;
     String ShopAddress;
     EditText ShopPhone_id;
     String ShopPhone;
-    EditText ShopPrivateNum_id;
+    TextView ShopPrivateNum_id;
+    String ShopParking;
     String ShopPrivateNum;
     EditText Place_id;
     String Place;
@@ -60,6 +66,7 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
     String store_license;
     String store_parking;
     String store_image;
+    String store_address;
     int store_maxclientnum;
     Bitmap old_image;   //
 
@@ -68,16 +75,17 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_my_page);
         user_email = getIntent().getStringExtra("user_email"); //이메일 섹션 정보 받기
-        store_name = getIntent().getStringExtra("store_name");
-        store_phone_num = getIntent().getStringExtra("store_phone_num");
-        store_license = getIntent().getStringExtra("store_license");
-        store_parking = getIntent().getStringExtra("store_parking");
-        store_maxclientnum = getIntent().getIntExtra("store_maxclientnum", 0);
+        store_name = getIntent().getStringExtra("store_name"); //가게 이름
+        store_address = getIntent().getStringExtra("store_address");  //가게 주소
+        store_phone_num = getIntent().getStringExtra("store_phone_num"); //가게 전화번호
+        store_license = getIntent().getStringExtra("store_license"); //사업자 등록번호
+        store_parking = getIntent().getStringExtra("store_parking"); //주차 가능?
+        store_maxclientnum = getIntent().getIntExtra("store_maxclientnum", 0); //수용인원
         store_image = getIntent().getStringExtra("store_image");//가게 사진 String으로 받기
 
         ShopImage =(ImageView)findViewById(R.id.Shop_imge);
         old_image = StringToBitmap(store_image); //bitmap형태의 사진 데이터 받음
-        byte[] old_imge_byte = bitmapToByteArray(old_image);   //사진 bitmap->byte으로 변경
+//        byte[] old_imge_byte = bitmapToByteArray(old_image);   //사진 bitmap->byte으로 변경
         ShopImage.setImageBitmap(img); //사진 띄우기
 
         //가게 사진
@@ -95,15 +103,15 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
 
         //뷰들 선언하기
         findViewById(R.id.register).setOnClickListener(this);
-        ShopName_id = (EditText)findViewById(R.id.ShopName) ;
-        ShopAddress_id = (EditText)findViewById(R.id.ShopAddress) ;
-        ShopPhone_id = (EditText)findViewById(R.id.ShopPhone) ;
-        ShopPrivateNum_id = (EditText)findViewById(R.id.ShopPrivateNum) ;
-        Place_id = (EditText)findViewById(R.id.Place) ;
-        radioGroup_id = (RadioGroup)findViewById(R.id.radioGroup);
-        radiobutton = (RadioButton) findViewById(radioGroup);
-        Capacity_id = (NumberPicker)findViewById(R.id.Capacity);
+        ShopName_id = (TextView)findViewById(R.id.ShopName) ; //가게이름
+        ShopAddress_id = (TextView)findViewById(R.id.ShopAddress) ; //가게 주소
+        ShopPhone_id = (EditText)findViewById(R.id.ShopPhone) ; //가게 전화번호
+        ShopPrivateNum_id = (TextView)findViewById(R.id.ShopPrivateNum) ; //사업자 등록번호
 
+        radioGroup_id = (RadioGroup)findViewById(R.id.radioGroup); //주차 가능 라디오 그룹 아디 가져오기
+        possible_id = (RadioButton)findViewById(R.id.r_btn1); //주차 가능 버튼
+        impossible_id = (RadioButton)findViewById(R.id.r_btn2); //주차 안돼 버튼
+        Capacity_id = (NumberPicker)findViewById(R.id.Capacity); //수용 인원
 
         final NumberPicker numberPickerCapacity = (NumberPicker) findViewById(R.id.Capacity);
 
@@ -113,11 +121,23 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
         numberPickerCapacity.setValue(0);
 
         ShopName_id.setText(store_name) ;
+        ShopAddress_id.setText(store_address);
         ShopPhone_id.setText(store_phone_num);
         ShopPrivateNum_id.setText(store_license);
+        if(store_parking.equals("가능")){
+            possible_id.setChecked(true);
+        }
+        else{
+            impossible_id.setChecked(true);
+        }
+
         Capacity_id.setValue(store_maxclientnum);
         //radiobutton.setChecked(true);
 
+
+        /*
+        * 여기까지는 DB의 가게 정보를 출력해준 거
+        * */
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -165,7 +185,7 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
     //Bitmap을 Byte로 변환
     public byte[] bitmapToByteArray( Bitmap $bitmap ) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream() ;
-        $bitmap.compress( Bitmap.CompressFormat.JPEG, 100, stream) ;
+        //$bitmap.compress( Bitmap.CompressFormat.JPEG, 100, stream) ;
         byte[] byteArray = stream.toByteArray() ;
         return byteArray ;
     }
@@ -175,14 +195,23 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.register:
                 //textview들의 값들 가져오기
-                ShopName = ShopName_id.getText().toString();
-                ShopAddress = ShopAddress_id.getText().toString();
-                ShopPhone = ShopPhone_id.getText().toString();
-                ShopPrivateNum = ShopPrivateNum_id.getText().toString();
-                Place = Place_id.getText().toString();
-                radioText = radiobutton.getText().toString();
-                Capacity = Capacity_id.getValue();
-                new JSONTask().execute("http://172.30.1.35:3000/modifystore");
+                ShopName = ShopName_id.getText().toString(); //수정한 가게 이름
+                //ShopAddress = ShopAddress_id.getText().toString();
+                ShopPhone = ShopPhone_id.getText().toString(); //수정한 가게 전화번호
+                //ShopPrivateNum = ShopPrivateNum_id.getText().toString();
+                //Place = Place_id.getText().toString();
+                if(possible_id.isChecked()){
+                    ShopParking = possible_id.getText().toString(); //"가능"을 DB에 보내줄것
+                }
+                else{
+                    ShopParking = impossible_id.getText().toString(); //"불가능"을 DB에 보내줄것
+                }
+                Capacity = Capacity_id.getValue(); //수정한 수용인원
+                System.out.println("============="+ShopName+"  "+ShopPhone+"  "+"  "+Capacity+"=========");
+                /*
+                * 사진은 나중에
+                * */
+                new JSONTask().execute("http://192.168.43.231:3000/modifystore");
                 //사용자가 입력한 정보 텍스트로 변환
 
                 break;
@@ -200,9 +229,9 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("email", user_email);
                 jsonObject.put("StoreName", ShopName);//가게이름
-                jsonObject.put("StoreAddress", ShopAddress);//가게주소
+                //jsonObject.put("StoreAddress", ShopAddress);//가게주소
                 jsonObject.put("StorePhone", ShopPhone);//가게 전화번호
-                jsonObject.put("parking",radioText);//주차 여부
+                jsonObject.put("parking",ShopParking);//주차 여부
                 jsonObject.put("Capacity", Capacity);//수용인원
                 jsonObject.put("image", img);//이미지
 
@@ -286,7 +315,7 @@ public class Owner_myPage extends AppCompatActivity implements View.OnClickListe
                 //alert.show();
 
                 Toast.makeText(getApplicationContext(),"가게 정보 수정 완료", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext() , Owner_myPage.class);   //새로고침
+                Intent intent = new Intent(getApplicationContext() , mainUI.class);   //새로고침
                 intent.putExtra("user_email",user_email); //intent로 mainUI activity에 전달할 이메일
                 //액티비티 시작!
                 startActivity(intent);

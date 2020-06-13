@@ -98,7 +98,7 @@ public class OwnerSingUp extends AppCompatActivity  {
         //SignUp에서 보낸 데이터 받기
         Intent intent = getIntent();
         email = intent.getExtras().getString("email");
-        pw =intent.getExtras().getString("passward");
+        pw =intent.getExtras().getString("password");
         phoneNum = intent.getExtras().getString("phoneNum");
         Year = intent.getExtras().getInt("Year");
         month = intent.getExtras().getInt("month");
@@ -166,13 +166,15 @@ public class OwnerSingUp extends AppCompatActivity  {
     //Byte를 Bitmap으로 변환
     //등록완료 버튼이 눌렸을 때
     public void AllregisterCliked(View v){
-        new JSONTask().execute("http://172.30.1.35:3000/register");
+
         //사용자가 입력한 정보 텍스트로 변환
         StoreName = StoreName_id.getText().toString();
         StoreAddress= StoreAddress_id.getText().toString();
         StorePhone = StorePhone_id.getText().toString();
         StorePrivateNum = StorePrivateNum_id.getText().toString();
         Capacity = Capacity_id.getValue();
+        new JSONTask().execute("http://192.168.43.231:3000/register");
+
 
     }
 
@@ -185,7 +187,7 @@ public class OwnerSingUp extends AppCompatActivity  {
                 //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("email", email);
-                jsonObject.put("passward", pw);
+                jsonObject.put("password", pw);
                 jsonObject.put("phoneNum", phoneNum);
                 jsonObject.put("Year", Year);
                 jsonObject.put("month", month);
@@ -266,6 +268,7 @@ public class OwnerSingUp extends AppCompatActivity  {
         @Override
         protected void onPostExecute(String result) {//UI 스레드 상에서 실행 doInBackground 종료 후 파라미터를 전달 받음
             super.onPostExecute(result);
+            System.out.println("====================="+result+"===================");
             if(result.equals("OK!")) {
                 //System.out.println("***************:"+email);
 

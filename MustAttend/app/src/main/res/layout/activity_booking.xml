@@ -33,7 +33,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/temppurpose"
+            android:id="@+id/respurpose"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
@@ -80,14 +80,14 @@
                     android:orientation="horizontal">
 
                     <NumberPicker
-                        android:id="@+id/picker_month"
+                        android:id="@+id/month"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
                         android:layout_margin="10dp"></NumberPicker>
 
                     <NumberPicker
-                        android:id="@+id/picker_day"
+                        android:id="@+id/day"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
@@ -122,14 +122,14 @@
                     android:orientation="horizontal">
 
                     <NumberPicker
-                        android:id="@+id/picker_hour"
+                        android:id="@+id/hour"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
                         android:layout_margin="10dp"></NumberPicker>
 
                     <NumberPicker
-                        android:id="@+id/picker_minute"
+                        android:id="@+id/minute"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
@@ -161,7 +161,7 @@
             android:textStyle="bold" />
 
         <NumberPicker
-            android:id="@+id/picker_num"
+            android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_gravity="center|center_horizontal|center_vertical"
@@ -177,7 +177,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_position"
+            android:id="@+id/btn_request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

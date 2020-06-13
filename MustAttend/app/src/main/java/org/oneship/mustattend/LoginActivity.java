@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         // node.js로부터 올바르게 로그인 성공 여부 값 전달받기
         //성공했으면 mainUI로 intent 시작
         //아니면 팝업
-        new JSONTask().execute("http://192.168.0.2:3000/login");
+        new JSONTask().execute("http://192.168.43.231:3000/login");
         email = username_id.getText().toString();   //email String 문자열로 저장
         //Toast.makeText(getApplicationContext(),email, Toast.LENGTH_LONG).show();
         password = password_id.getText().toString();    //password String 문자열로 저장
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("email", email);
-                jsonObject.put("passward", password);
+                jsonObject.put("password", password);
 
                 String data = jsonObject.toString();
                 HttpURLConnection con = null;

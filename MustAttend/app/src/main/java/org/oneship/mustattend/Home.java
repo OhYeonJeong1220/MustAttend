@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -39,6 +40,15 @@ public class Home extends Fragment {
             public void onClick(View v) {
                 mainUI activity = (mainUI) getActivity();
                 activity.onMyPosition();
+            }
+        });
+
+        Button store = viewGroup.findViewById(R.id.storelist);
+        store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainUI activity = (mainUI) getActivity();
+                activity.onStoreList();
             }
         });
 

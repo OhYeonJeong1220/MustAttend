@@ -15,13 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RealRecommendActivity"></activity>
-        <activity android:name=".TestActivitiy" />
-        <activity android:name=".Position"></activity>
-        <activity android:name=".MyPosition"></activity>
-        <activity android:name=".Home" >
+        <activity android:name=".AllStore" >
 
         </activity>
+        <activity android:name=".RealRecommendActivity" />
+        <activity android:name=".Position" />
+        <activity android:name=".Home"></activity>
         <activity android:name=".GoogleMap" />
         <activity android:name=".SignUp" />
         <activity android:name=".ChangingInfo" />
@@ -30,27 +29,25 @@
         <activity android:name=".CheckReservation" />
         <activity android:name=".Action_Bar" />
         <activity android:name=".ReviewManagment_Owner_Activity" />
-        <activity android:name=".mainUI">
+        <activity android:name=".mainUI"></activity>
+        <activity android:name=".mypage" />
+        <activity android:name=".LogoutActivity" />
+        <activity android:name=".ReviewManagment_UserActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mypage" />
-        <activity android:name=".LogoutActivity" />
-        <activity android:name=".ReviewManagment_UserActivity" />
-        <activity android:name=".LoginActivity">
-
-        </activity>
-        <activity android:name=".PositioningActivity"></activity>
         <activity android:name=".ReserveRequest" />
-        <activity android:name=".StoreListActivity"></activity>
+        <activity android:name=".StoreListActivity" />
         <activity android:name=".BookingActivity" />
         <activity android:name=".RecommendActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".StoreActivity"></activity>
+        <activity android:name=".StoreActivity" />
         <activity android:name=".RealReservation" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAEejySssg7zoXT_EYl2wYkZP4Q_2e0oUM" />
